@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --font-stage: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-stage);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   CIRCONSTANCES DE SCÈNE (3 THEMES SYSTEM)
+   ============================================================ */
+
+/* 1. SCÈNE SOMBRE (Dark Stage) - #121214 & #FFB300 */
+.theme-stage-dark body {
+  background-color: #121214;
+  color: #ffffff;
+}
+
+.theme-stage-dark .stage-mode-container {
+  background-color: #121214 !important;
+  color: #ffffff !important;
+}
+
+.theme-stage-dark .stage-mode-container .stage-lyric-active {
+  color: #FFB300 !important;
+  text-shadow: 0 0 16px rgba(255, 179, 0, 0.7), 0 0 30px rgba(245, 158, 11, 0.4) !important;
+}
+
+.theme-stage-dark .stage-mode-container .stage-chord-badge {
+  background-color: #1a1a20 !important;
+  color: #FFB300 !important;
+  border-color: #45300d !important;
+}
+
+.theme-stage-dark .stage-mode-container .stage-chord-badge-active {
+  background-color: #FFB300 !important;
+  color: #000000 !important;
+  border-color: #fef08a !important;
+}
+
+/* 2. SCÈNE EXTÉRIEURE (High Contrast Light / Plein Soleil) */
+.theme-stage-light body {
+  background-color: #f8fafc;
+  color: #000000;
+}
+
+.theme-stage-light .stage-mode-container {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.theme-stage-light .stage-mode-container .stage-lyric-active {
+  color: #000000 !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+}
+
+.theme-stage-light .stage-mode-container .stage-chord-badge {
+  background-color: #fef08a !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+.theme-stage-light .stage-mode-container .stage-chord-badge-active {
+  background-color: #f59e0b !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  font-weight: 900 !important;
+}
+
+/* 3. STUDIO / RÉPÉTITION (Slate Gray - Gris Ardoise) */
+.theme-studio-slate body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.theme-studio-slate .stage-mode-container {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+.theme-studio-slate .stage-mode-container .stage-lyric-active {
+  color: #38bdf8 !important;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.6) !important;
+}
+
+.theme-studio-slate .stage-mode-container .stage-chord-badge {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+  border-color: #0284c7 !important;
+}
+
+.theme-studio-slate .stage-mode-container .stage-chord-badge-active {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #bae6fd !important;
+}
+
+/* ============================================================
+   HARDWARE PRO SKIN (Ableton & Native Instruments Inspired)
+   ============================================================ */
+
+/* Hardware Fader Track */
+.hardware-fader-slot {
+  background: linear-gradient(to right, #09090b, #18181b, #09090b);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Hardware Fader Cap / Thumb */
+.hardware-fader-cap {
+  background: linear-gradient(180deg, #3f3f46 0%, #27272a 48%, #18181b 52%, #27272a 100%);
+  border: 1px solid #52525b;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.hardware-fader-cap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background-color: #fbbf24;
+  box-shadow: 0 0 4px rgba(251, 191, 36, 0.8);
+  transform: translateY(-50%);
+}
+
+/* Active LED Glows for Buttons */
+.led-mute-active {
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 12px rgba(220, 38, 38, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+}
+
+.led-solo-active {
+  background-color: #eab308 !important;
+  color: #000000 !important;
+  border-color: #fde047 !important;
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.9), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Hamide Litime Software",
+  "description": "Application de scène, carnet de chants, prompteur live karaoké (.kar) et studio MIDI VSampler 3 par Hamide Litime Software.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
